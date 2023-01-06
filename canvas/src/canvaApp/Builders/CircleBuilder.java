@@ -1,12 +1,12 @@
 package canvaApp.Builders;
 
 import canvaApp.figures.Figure;
-import canvaApp.figures.Oval;
+import canvaApp.figures.Circle;
 
 
-public class OvalBuilder implements FigureBuilder{
+public class CircleBuilder implements FigureBuilder{
     @Override
     public Figure getObject() {
-        return new Oval();
+        return new Circle();
     }
 }

@@ -1,7 +1,7 @@
 package canvaApp;
 
 import canvaApp.Builders.FigureBuilder;
-import canvaApp.Builders.OvalBuilder;
+import canvaApp.Builders.CircleBuilder;
 import canvaApp.Builders.SquareBuilder;
 import canvaApp.figures.Figure;
 
@@ -14,7 +14,7 @@ public class FigureFactory {
     static {
         shapes = new HashMap<>();
         shapes.put('1', new SquareBuilder());
-        shapes.put('2', new OvalBuilder());
+        shapes.put('2', new CircleBuilder());
     }
 
     public static Figure getFigure(Character key) {

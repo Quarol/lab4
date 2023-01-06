@@ -2,7 +2,7 @@ package canvaApp.figures;
 
 import java.awt.*;
 
-public final class Oval extends Figure {
+public final class Circle extends Figure {
 
     public void draw(Graphics g) {
         g.setColor(color);
