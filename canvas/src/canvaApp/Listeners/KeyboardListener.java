@@ -3,10 +3,15 @@ package canvaApp.Listeners;
 import canvaApp.FigureFactory;
 import canvaApp.FigurePanel;
 
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-public record KeyboardListener(FigurePanel panel) implements KeyListener {
+public final class KeyboardListener extends KeyAdapter {
+    private final FigurePanel panel;
+
+    public KeyboardListener(FigurePanel panel) {
+        this.panel = panel;
+    }
 
     @Override
     public void keyPressed(KeyEvent e) {
@@ -16,13 +21,5 @@ public record KeyboardListener(FigurePanel panel) implements KeyListener {
             panel.setFigureIndicator(key);
         if (key == 'c')
             panel.clear();
-    }
-
-    @Override
-    public void keyTyped(KeyEvent e) {
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
     }
 }

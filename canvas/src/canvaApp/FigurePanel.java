@@ -12,7 +12,7 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class FigurePanel extends JPanel {
-    private ArrayList<Figure> figures = new ArrayList<>();
+    private final ArrayList<Figure> figures = new ArrayList<>();
     private Character figureIndicator = '1';
 
     public void setFigureIndicator(Character figureIndicator) {
@@ -51,9 +51,8 @@ public class FigurePanel extends JPanel {
     }
 
     public void clear() {
-        figures = new ArrayList<>();
+        figures.removeAll(figures);
         this.removeAll();
         this.repaint();
     }
 }
-

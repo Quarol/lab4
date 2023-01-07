@@ -15,5 +15,4 @@ public class ColorButton extends JButton{
 
         this.addActionListener(new ButtonListener(this));
     }
-
 }

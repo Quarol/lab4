@@ -12,13 +12,15 @@ public class EscButtonFrame extends JFrame {
 
     private static final int BUTTON_WIDTH = 100;
     private static final int BUTTON_HEIGHT = 100;
-    private static final JButton escapingBtn = new JButton();
 
     private static final int MARGIN = 40;
     private static final int MIN_PROXIMITY = 20;
     private static final int SHIFT = 20;
+
     private int currentX;
     private int currentY;
+
+    private final JButton escapingBtn = new JButton();
 
     public EscButtonFrame() {
         this.setTitle("Escaping button");

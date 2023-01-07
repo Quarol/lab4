@@ -3,17 +3,19 @@ package canvaApp;
 import java.awt.*;
 
 public class FigureParametersHolder {
-    private static Color color = Color.GREEN;
-    private static int size = 40;
-    private static final int minSize = 10;
+    private static Color COLOR = Color.GREEN;
+    private static int SIZE = 40;
+    private static final int MIN_SIZE = 10;
+    private static final int SIZE_CHANGE = 5;
 
-    public static Color getColor() { return color; }
+    public static void setColor(Color color) { COLOR = color; }
+    public static Color getColor() { return COLOR; }
     public static int getSize() {
-        return size;
+        return SIZE;
     }
 
-    public static void setColor(Color color) { FigureParametersHolder.color = color; }
-    public static void setSize(int size) {
-        FigureParametersHolder.size = (size < minSize) ? minSize : size;
+    public static void changeSize(int wheelRotation) {
+        int size = SIZE - wheelRotation * SIZE_CHANGE;
+        SIZE = Math.max(size, MIN_SIZE);
     }
 }
