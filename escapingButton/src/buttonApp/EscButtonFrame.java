@@ -12,7 +12,7 @@ public class EscButtonFrame extends JFrame {
 
     private static final int BUTTON_WIDTH = 100;
     private static final int BUTTON_HEIGHT = 100;
-    private final JButton escapingBtn = new JButton();
+    private static final JButton escapingBtn = new JButton();
 
     private static final int MARGIN = 40;
     private static final int MIN_PROXIMITY = 20;
@@ -30,17 +30,15 @@ public class EscButtonFrame extends JFrame {
         currentX = WINDOW_WIDTH/2 - BUTTON_WIDTH/2;
         currentY = WINDOW_HEIGHT/2 - BUTTON_HEIGHT/2;
 
-
         escapingBtn.addActionListener(e -> {
-            setVisible(false);
-            dispose();
+            this.setVisible(false);
+            this.dispose();
             new Canvas();
         });
-
         escapingBtn.setBounds(currentX, currentY, BUTTON_WIDTH, BUTTON_HEIGHT);
         escapingBtn.setText("Catch me");
-        escapingBtn.setVisible(true);
         this.add(escapingBtn);
+
         this.addMouseMotionListener(new MouseMotionAdapter() {
             @Override
             public void mouseMoved(MouseEvent e) {

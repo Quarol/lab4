@@ -22,7 +22,6 @@ public class Canvas extends JFrame {
     private static final ColorButton orangeButton = new ColorButton(Color.ORANGE);
     private static final ColorButton brownButton = new ColorButton(new Color(150, 75, 0));
 
-    private final JTextArea instructions;
     private static final Color BACKGROUND_COLOR = new Color(251, 251, 240);
     private static final Color PANEL_COLOR = Color.WHITE;
 
@@ -38,7 +37,6 @@ public class Canvas extends JFrame {
 
         panel.setBackground(PANEL_COLOR);
         panel.setBounds(MARGIN, MARGIN, WINDOW_WIDTH - 2*MARGIN, PANEL_HEIGHT);
-        panel.setVisible(true);
         this.add(panel);
         panel.setOpaque(true);
         Border blackLine = BorderFactory.createLineBorder(Color.black);
@@ -47,7 +45,6 @@ public class Canvas extends JFrame {
 
 
         setColorLabel.setBounds(495, 500, 170, 10);
-        setColorLabel.setVisible(true);
         this.add(setColorLabel);
 
         blackButton.setBounds(495, 530, 30, 30);
@@ -74,7 +71,7 @@ public class Canvas extends JFrame {
         blueButton.setBounds(615, 570, 30, 30);
         this.add(blueButton);
 
-        instructions = new JTextArea(
+        JTextArea instructions = new JTextArea(
                 """
                         Key:
                          1) Click or click-drag mouse to paint
